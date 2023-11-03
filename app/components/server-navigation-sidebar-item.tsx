@@ -42,9 +42,16 @@ export function ServerNavigationSidebarItem({
 
 export function MeServerItem() {}
 
-export function ServerAction({ icon }: { icon: React.ReactNode }) {
+export function ServerAction({
+  icon,
+  onClick,
+}: {
+  icon: React.ReactNode;
+  onClick?: React.MouseEventHandler;
+}) {
   return (
     <button
+      onClick={onClick}
       className="
         flex items-center justify-center
         transition-all ease duration-300

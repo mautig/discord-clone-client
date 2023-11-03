@@ -1,9 +1,10 @@
-import { FaCompass, FaPlus } from "react-icons/fa";
+import { FaCompass } from "react-icons/fa";
 import { Server } from "../models/server";
 import {
   ServerAction,
   ServerNavigationSidebarItem,
 } from "./server-navigation-sidebar-item";
+import { CreateServerButton } from "./create-server-button";
 
 export function ServerNavigationSidebar() {
   const servers: Server[] = [
@@ -30,7 +31,7 @@ export function ServerNavigationSidebar() {
       {servers.map((server) => (
         <ServerNavigationSidebarItem key={server.id} server={server} />
       ))}
-      <ServerAction icon={<FaPlus size={14} />} />
+      <CreateServerButton />
       <ServerAction icon={<FaCompass size={14} />} />
     </div>
   );
